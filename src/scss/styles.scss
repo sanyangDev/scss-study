@@ -1,6 +1,11 @@
-body {
-  background: peru;
-  a {
-    color: blue;
-  }
+@import "_extends";
+
+a{
+  @extend %button;
+  text-decoration: none;
+}
+
+button{
+  @extend %button;
+  border: none;
 }
