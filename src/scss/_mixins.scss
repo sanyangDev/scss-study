@@ -1,9 +1,15 @@
-@mixin link($word) {
-  display: block;
-  text-decoration: none;
-  @if $word == "odd" {
-    color : aqua;
-  } @else {
-    color : yellowgreen;
+@mixin responsive($width) {
+  @if $width == "768" {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $width =="900" {
+    @media screen and (min-width: 769px) and (max-width: 900px) {
+      @content;      
+    }
+  } @else if $width == "1080" {
+    @media screen and (min-width: 901px) {
+      @content;
+    }
   }
 }
